@@ -1,0 +1,12 @@
+{
+  "name": "Portfolio",
+  "version": "0.1",
+  "main": "index.js",
+  "repository": "https://github.com/rahulkeerthi/portfolio",
+  "author": "Rahul Keerthi <rahulkeerthi2@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "fullpage.js": "^3.0.8"
+  }
+}
