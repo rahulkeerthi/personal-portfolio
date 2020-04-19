@@ -1,14 +1,28 @@
 import fullpage from 'fullpage.js';
 
-var fullPageInstance = new fullpage('#fullpage', {
+new fullpage('#fullpage', {
   navigation: true,
-  // sectionsColor:['white', 'black', 'white', 'black'],
   licenseKey: 'DD3255CD-F96B4CB0-AC236BDB-F7FC1126',
-  verticalCentered: false
+  verticalCentered: false,
+  scrollOverflow: true,
+  afterRender: function() {
+    const paragraph = document.querySelector('.paragraph');
+    const textZoom = () =>{
+
+    }
+    paragraphs.forEach(para => {
+      const words = para.innerText.split(" ")
+      words.forEach(word => {
+        word = `<span class=\"word\">${word}</span>`
+      })
+    })
+  }
 });
 
 //methods
 fullpage_api.setAllowScrolling(true);
+
+
 
 // //Navigation
 // menu: '#menu',
