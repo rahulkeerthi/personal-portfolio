@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"/Users/rahaluha/code/rahulkeerthi/Projects/01 Portfolio/imgs/scott-webb2.jpg":[["scott-webb2.bf12bdd5.jpg","imgs/scott-webb2.jpg"],"imgs/scott-webb2.jpg"],"/Users/rahaluha/code/rahulkeerthi/Projects/01 Portfolio/imgs/simone-hutsch.jpg":[["simone-hutsch.6eaf3cfa.jpg","imgs/simone-hutsch.jpg"],"imgs/simone-hutsch.jpg"],"/Users/rahaluha/code/rahulkeerthi/Projects/01 Portfolio/imgs/thiebaud-faix.jpg":[["thiebaud-faix.1b2172ef.jpg","imgs/thiebaud-faix.jpg"],"imgs/thiebaud-faix.jpg"],"/Users/rahaluha/code/rahulkeerthi/Projects/01 Portfolio/imgs/simone-hutsch2.jpg":[["simone-hutsch2.055c0623.jpg","imgs/simone-hutsch2.jpg"],"imgs/simone-hutsch2.jpg"],"/Users/rahaluha/code/rahulkeerthi/Projects/01 Portfolio/imgs/scott-webb.jpg":[["scott-webb.537ea22b.jpg","imgs/scott-webb.jpg"],"imgs/scott-webb.jpg"],"_css_loader":"../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55144" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50561" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

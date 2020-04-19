@@ -7,6 +7,7 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "fullpage.js": "^3.0.8"
+    "fullpage.js": "^3.0.8",
+    "parcel": "^2.0.0-nightly.226"
   }
 }
