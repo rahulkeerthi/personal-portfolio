@@ -55,10 +55,7 @@ new fullpage("#fullpage", {
 				span.addEventListener("touchcancel", resetColour);
 			});
 		}
-  },
-  // function for contact form ajax functionality
-	afterLoad: function () {
-
+	  // function for contact form ajax functionality
 		// get the form elements
 		const form = document.getElementById("ajax-form");
 		const button = document.getElementById("form-button");
