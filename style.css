@@ -85,22 +85,27 @@
 
 #project1 {
 	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('imgs/flashcodes.jpg');
+	filter: grayscale(1);
 }
 
 #project2 {
 	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("imgs/lairbnb.jpg");
+	filter: grayscale(1);
 }
 
 #project3 {
 	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("imgs/jfg.png");
+	filter: grayscale(1);
 }
 
 #project4 {
 	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+	filter: grayscale(1);
 }
 
 #project5 {
 	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("imgs/lairbnb.jpg");
+	filter: grayscale(1);
 }
 
 .work-item {
@@ -140,12 +145,20 @@
 	transition: ease 1s;
 }
 
+.course-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 1rem;
+	row-gap: 1rem;
+	transition: ease 1s;
+}
+
 #coursework {
 	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
 }
 
 .course-item {
-	font-size: 2vw;
+	font-size: 1.5rem;
 	font-weight: bold;
 	padding: 8px 0 8px 0;
 	border-radius: 5px;
@@ -203,7 +216,7 @@ h1 {
 	}
 
 	#section1 {
-    background: url("/imgs/scott-webb2.jpg") right top;
+		background: url("/imgs/scott-webb2.jpg") right top;
 	}
 
 	#section2 {
@@ -252,8 +265,19 @@ h1 {
 		font-size: 1.5vw;
 	}
 
+	#coursework h1 {
+		font-size: 2rem !important;
+	}
+
+	.course-grid {
+		grid-template-columns: 1fr;
+		column-gap: 1rem;
+		row-gap: 1rem;
+		padding-top: 1rem !important;
+	}
+
 	.course-item {
-		font-size: 6vw;
+		font-size: 1.5rem;
 		text-shadow: 1px 1px 3px black;
 	}
 
