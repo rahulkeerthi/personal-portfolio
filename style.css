@@ -40,7 +40,6 @@ h1 {
 	background-image: url("/imgs/thiebaud-faix.jpg");
 	background-position: center top;
 	background-size: cover;
-	display: grid;
 }
 
 #section4 {
@@ -50,9 +49,33 @@ h1 {
 }
 
 #about-text {
-  text-align: center;
-  width: 30%;
-  margin-top: 1rem;
+	text-align: justify;
+	max-width: 30%;
+	margin-top: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	color: #454545;
+}
+
+.word {
+	transition: ease 0.5s;
+	display: inline-block;
+}
+
+.word:hover {
+	transition: ease 0.2s;
+	transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+}
+
+.adjacent-word {
+	transition: ease 0.2s;
+	transform: scale(1.02);
+	-webkit-transform: scale(1.02);
+	-moz-transform: scale(1.02);
+	-ms-transform: scale(1.02);
 }
 
 #work-grid {
@@ -62,8 +85,28 @@ h1 {
 	row-gap: 1rem;
 }
 
+
+#project1 {
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('imgs/flashcodes.jpg');
+}
+
+#project2 {
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("imgs/lairbnb.jpg");
+}
+
+#project3 {
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("imgs/jfg.png");
+}
+
+#project4 {
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+}
+
+#project5 {
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("imgs/lairbnb.jpg");
+}
+
 .work-item {
-	background-color: #4545457f;
 	background-size: cover;
 	background-position: center;
 	height: 180px;
@@ -71,12 +114,25 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	color: white;
-	font-size: 24px;
+	font-size: 1.5vw;
 	font-weight: bold;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+.work-item div {
+	opacity: 0;
+	transition: ease 1s;
+}
+
+.work-item:hover div {
+	opacity: 1;
+	transform: scale(1.2);
+	transition: ease 1s;
+}
+
 
 /* @media (max-width: 960px) {
 } */
@@ -87,6 +143,16 @@ h1 {
   }
 }
 */
+
+.unselectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 
 @media (max-width: 540px) {
 	h1 {
@@ -116,19 +182,27 @@ h1 {
   }
   
   #about-text {
-    width: 70%;
-    color: black;
-  }
-
-  .paragraph {
-    text-align: justify;
-  }
+		width: 70%;
+		max-width: 70%;
+		background: #F7F4F37f;
+		padding: 0.5rem 1rem 0.5rem 1rem;
+		border-radius: 8px;
+	}
+	
+	p {
+		margin-bottom: 0 !important;
+	}
 
 	#work-grid {
 		display: grid;
 		grid-template-columns: 1fr;
 		column-gap: 1rem;
 		row-gap: 1rem;
+	}
+
+	.work-item div {
+		opacity: 1;
+		font-size: 1.5vw;
 	}
 }
 

@@ -13,10 +13,9 @@
   <body>
     <script async type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
     <script async src="index.js"></script>
-    <script defer type="text/javascript" src="texteffect.js"></script>
 
     <div id="fullpage" class="fullpage-wrapper">
-      <div class="section fp-section fp-noscroll" id="section1">
+      <div class="section fp-section fp-noscroll" data-anchor="firstPage" id="section1">
         <div class="container">
           <h1 class="display-4 pt-3">RAHUL KEERTHI</h1>
           <h3 class="text-center text-muted">full stack developer</h3>
@@ -26,37 +25,55 @@
         <div></div>
         
       </div>
-      <div class="section fp-section fp-noscroll" id="section2">
+      <div class="section fp-section fp-noscroll" data-anchor="secondPage" id="section2">
         <div>
-          <h1 class="display-4 pt-3">ABOUT ME</h1>
+          <h1 class="display-4 pt-3">ABOUT</h1>
         </div>
         <div class="container" id="about-text">
-          <p class="paragraph"><br>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. </p>
+          <p class="paragraph unselectable">Having completed Le Wagon's Full Stack Web Developer bootcamp, I am now looking for full-time roles or freelance opportunities. Given my background in consulting, I am a team player, great communicator and immensely proactive. I am part of the teaching team at Le Wagon for the current (remote!) batches in London. My side hustle is a football culture festival, Jumpers for Goalposts, that I founded and produced that had its first event in 2019.</p>
+          <p class="paragraph unselectable">My skillset includes Ruby, Rails, JavaScript (up to ES6), CSS3/Sass, HTML5, Node, React (incl Redux), SQL (incl PostgreSQL) and Git. I'm familiar with Rails and React stacks using Heroku for deployment. I'm also comfortable with Bootstrap and Semantic. Currently I'm learning React Native and working on personal projects using Ruby on Rails.</p>
         </div>
       </div>
-      <div class="section fp-section" id="section3">
+      <div class="section fp-section" data-anchor="thirdPage" id="section3">
         <div>
           <h1 class="display-4 pt-3">MY WORK</h1>
         </div>
         <div class="container py-5" id="work-grid">
-          <div class="work-item">
-            TESTING
-          </div>
-          <div class="work-item">
-            TESTING
-          </div>
-          <div class="work-item">
-            TESTING
-          </div>
-          <div class="work-item">
-            TESTING
-          </div>
-          <div class="work-item">
-            TESTING
-          </div>
+          <a href="https://flashcodes.xyz" target="_blank" class="work-link btn">
+            <div class="work-item" id="project1">
+              <div class="">
+                <p>a gamified quiz app built with ruby on rails,</p>
+                <p>jquery, heroku, sass and postgreSQL</p>
+              </div>
+            </div>
+          </a>
+          <a href="https://lairbnb-lewagon.herokuapp.com/" target="_blank" class="work-link btn">
+            <div class="work-item" id="project2" >
+              <div class="">
+                <p>an airbnb clone built with ruby on rails,</p>
+                <p>es6, heroku, sass and postgreSQL</p>
+              </div>
+            </div>
+          </a>
+          <a href="https://www.jumpersforgoalpostsfestival.com" target="_blank" class="work-link btn">
+            <div class="work-item" id="project3" >
+              <div class="">
+                <p>WIP: festival website built with html, css</p>
+                <p>and javascript, with integrated 3rd-party CMS</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" target="_blank" class="work-link btn">
+            <div class="work-item" id="project4" >
+              <div class="">
+                <p>WIP: </p>
+                <p>and javascript, with integrated 3rd-party CMS</p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
-      <div class="section fp-section fp-noscroll" id="section4">
+      <div class="section fp-section fp-noscroll" data-anchor="fourthPage" id="section4">
         <div class="container">
           <div>
             <h1 class="display-4 py-3">GET IN TOUCH</h1>

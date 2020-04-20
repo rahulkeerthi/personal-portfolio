@@ -1,28 +1,57 @@
 import fullpage from 'fullpage.js';
+let hue = 1;
+
+function shiftColour() {
+  this.previousElementSibling.classList.add('adjacent-word')
+  this.nextElementSibling.classList.add('adjacent-word')
+  hue += 5
+  this.style.color = `hsl(${hue}, 100%, 50%)`
+  this.previousElementSibling.style.color = `hsl(${hue}, 100%, 60%)`
+  this.previousElementSibling.previousElementSibling.style.color = `hsl(${hue}, 100%, 70%)`
+  this.nextElementSibling.style.color = `hsl(${hue}, 100%, 60%)`
+  this.nextElementSibling.nextElementSibling.style.color = `hsl(${hue}, 100%, 70%)`
+} 
+
+function resetColour() {
+  this.previousElementSibling.classList.remove('adjacent-word')
+  this.nextElementSibling.classList.remove('adjacent-word')
+  this.style.color = ""
+  this.previousElementSibling.style.color = ""
+  this.previousElementSibling.previousElementSibling.style.color = ""
+  this.nextElementSibling.style.color = ""
+  this.nextElementSibling.nextElementSibling.style.color = ""
+} 
 
 new fullpage('#fullpage', {
   navigation: true,
   licenseKey: 'DD3255CD-F96B4CB0-AC236BDB-F7FC1126',
+  anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
   verticalCentered: false,
   scrollOverflow: true,
-  afterRender: function() {
-    const paragraph = document.querySelector('.paragraph');
-    const textZoom = () =>{
-
-    }
-    paragraphs.forEach(para => {
-      const words = para.innerText.split(" ")
-      words.forEach(word => {
-        word = `<span class=\"word\">${word}</span>`
+  afterLoad: function(origin, destination){
+    var loadedSection = this;
+		if(origin.anchor != 'secondPage'){
+      const paragraphs = document.querySelectorAll('.paragraph');
+      paragraphs.forEach(para => {
+        let words = para.innerText.split(" ")
+        para.innerHTML = words.map(word => 
+          `<span class=\"word\">${word}</span>`
+        ).join(" ")
       })
-    })
-  }
+      const spans = document.querySelectorAll('span');
+      spans.forEach(span => {
+        span.addEventListener('mouseover', shiftColour);
+        span.addEventListener('touchenter', shiftColour);
+        span.addEventListener('mouseout', resetColour)
+        span.addEventListener('touchleave', resetColour)
+        span.addEventListener('touchcancel', resetColour)
+      })
+    }
+	}
 });
 
 //methods
 fullpage_api.setAllowScrolling(true);
-
-
 
 // //Navigation
 // menu: '#menu',
