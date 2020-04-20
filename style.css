@@ -6,23 +6,7 @@
   FLAME: #D8572A
 */
 
-body {
-	color: #1e1e24;
-}
-
-h1 {
-	color: #780116;
-	text-align: center;
-}
-
-.form__btn-submit {
-	border-radius: 5px;
-	margin-top: 16px;
-	padding: 2px 10px 2px 10px;
-	border: 1px solid #1e1e24;
-	cursor: pointer;
-	background-color: #f7f4f36f;
-}
+/* FULL PAGE SETUP */
 
 #section1 {
 	background-image: url("/imgs/scott-webb2.jpg");
@@ -48,6 +32,8 @@ h1 {
 	background-size: cover;
 }
 
+/*  ABOUT SECTION */
+
 #about-text {
 	text-align: justify;
 	max-width: 30%;
@@ -55,6 +41,11 @@ h1 {
 	display: flex;
 	flex-wrap: wrap;
 	color: #454545;
+}
+
+.paragraph {
+	font-size: 1.5vw;
+	line-height: 2vw;
 }
 
 .word {
@@ -78,13 +69,19 @@ h1 {
 	-ms-transform: scale(1.02);
 }
 
-#work-grid {
+/* PROJECTS AND COURSES SECTION */
+
+.work-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	column-gap: 1rem;
 	row-gap: 1rem;
+	transition: ease 1s;
 }
 
+.work-grid a {
+	transition: ease 1s;
+}
 
 #project1 {
 	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('imgs/flashcodes.jpg');
@@ -114,12 +111,17 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	color: white;
-	font-size: 1.5vw;
+	font-size: 1vw;
+	line-height: 1rem;
 	font-weight: bold;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-	transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transition: ease 1s;
+}
+
+.work-item.wip div {
+	opacity: 1;
 }
 
 .work-item div {
@@ -129,20 +131,56 @@ h1 {
 
 .work-item:hover div {
 	opacity: 1;
-	transform: scale(1.2);
+	transform: scale(1.05);
 	transition: ease 1s;
 }
 
-
-/* @media (max-width: 960px) {
-} */
-
-/* @media (max-width: 720px) {
-  .container {
-    width: 500px;
-  }
+.work-item:hover {
+	transform: scale(1.05);
+	transition: ease 1s;
 }
-*/
+
+#coursework {
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+}
+
+.course-item {
+	font-size: 2vw;
+	font-weight: bold;
+	padding: 8px 0 8px 0;
+	border-radius: 5px;
+	color: #F7F4F3;
+	transition: ease 0.7s;
+}
+
+.course-item:hover {
+	color: #D8572A;
+	text-shadow: 1px 1px 3px black;
+	transition: ease 0.7s;
+}
+
+/* CONTACT FORM SECTION */
+
+.form__btn-submit {
+	border-radius: 5px;
+	margin-top: 16px;
+	padding: 2px 10px 2px 10px;
+	border: 1px solid #1e1e24;
+	cursor: pointer;
+	background-color: #f7f4f36f;
+}
+
+
+/* GENERAL PURPOSE */
+
+body {
+	color: #1e1e24;
+}
+
+h1 {
+	color: #780116;
+	text-align: center;
+}
 
 .unselectable {
 	-webkit-touch-callout: none;
@@ -153,6 +191,7 @@ h1 {
 	user-select: none;
 }
 
+/* RESPONSIVE (BOOTSTRAP OVERRIDE) */
 
 @media (max-width: 540px) {
 	h1 {
@@ -184,35 +223,45 @@ h1 {
   #about-text {
 		width: 70%;
 		max-width: 70%;
-		background: #F7F4F37f;
+		background: #F7F4F3af;
 		padding: 0.5rem 1rem 0.5rem 1rem;
-		border-radius: 8px;
+		border-radius: 2px;
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		top: 15%;
+		left: 0;
+		right: 0;
 	}
 	
-	p {
-		margin-bottom: 0 !important;
+	#about-text p {
+		font-size: 1rem !important;
+		line-height: 1rem !important;
 	}
 
-	#work-grid {
+	.work-grid {
 		display: grid;
 		grid-template-columns: 1fr;
 		column-gap: 1rem;
 		row-gap: 1rem;
+		padding-top: 1rem !important;
 	}
 
 	.work-item div {
 		opacity: 1;
 		font-size: 1.5vw;
 	}
+
+	.course-item {
+		font-size: 6vw;
+		text-shadow: 1px 1px 3px black;
+	}
+
 }
 
 /*!
  * fullPage 3.0.8
  * https://github.com/alvarotrigo/fullPage.js
- *
- * @license GPLv3 for open source use only
- * or Fullpage Commercial License for commercial use
- * http://alvarotrigo.com/fullPage/pricing/
  *
  * Copyright (C) 2018 http://alvarotrigo.com/fullPage - A project by Alvaro Trigo
  */
