@@ -183,7 +183,6 @@
 	background-color: #f7f4f36f;
 }
 
-
 /* GENERAL PURPOSE */
 
 body {
@@ -234,12 +233,14 @@ h1 {
   }
   
   #about-text {
-		width: 70%;
-		max-width: 70%;
+		width: 80%;
+		max-width: 80%;
 		background: #F7F4F3af;
 		padding: 0.5rem 1rem 0.5rem 1rem;
 		border-radius: 2px;
+		line-height: 1rem;
 		position: absolute;
+		margin-top: 0;
 		margin-left: auto;
 		margin-right: auto;
 		top: 15%;
