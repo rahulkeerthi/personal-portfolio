@@ -36,16 +36,18 @@
 
 #about-text {
 	text-align: justify;
-	max-width: 30%;
+	width: 30vw;
+	max-width: 40vw;
 	margin-top: 1rem;
 	display: flex;
 	flex-wrap: wrap;
 	color: #454545;
+	overflow: hidden;
 }
 
 .paragraph {
-	font-size: 1.5vw;
-	line-height: 2vw;
+	font-size: 1.25rem;
+	/* line-height: 2vw; */
 }
 
 .word {
@@ -116,10 +118,9 @@
 	justify-content: center;
 	align-items: center;
 	color: white;
-	font-size: 1vw;
-	line-height: 1rem;
+	font-size: 1.5rem;
 	font-weight: bold;
-	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+	text-shadow: 2px 2px black;
 	border-radius: 5px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 	transition: ease 1s;
@@ -246,11 +247,12 @@ h1 {
 		top: 15%;
 		left: 0;
 		right: 0;
+		overflow:hidden;
 	}
 	
 	#about-text p {
 		font-size: 1rem !important;
-		line-height: 1rem !important;
+		line-height: 1.1rem !important;
 	}
 
 	.work-grid {
@@ -283,6 +285,19 @@ h1 {
 	}
 
 }
+
+@media (min-width: 540px) and (max-width: 700px) {
+	#about-text {
+		width: 50%;
+	}
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+	#about-text {
+		width: 40%;
+	}
+}
+
 
 /*!
  * fullPage 3.0.8
