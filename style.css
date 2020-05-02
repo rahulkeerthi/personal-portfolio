@@ -87,27 +87,31 @@
 
 #project1 {
 	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('imgs/flashcodes.jpg');
+	background-size: cover;
+	background-position: center;
 	filter: grayscale(1);
 }
 
 #project2 {
 	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("imgs/lairbnb.jpg");
+	background-size: cover;
+	background-position: top;
 	filter: grayscale(1);
 }
 
 #project3 {
-	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("imgs/jfg.jp2");
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("imgs/jfg.jpg");
+	background-size: cover;
+	background-position: top;
 	filter: grayscale(1);
 }
 
 #project4 {
-	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
-	filter: grayscale(1);
+	background-image: linear-gradient(rgba(200,0,0,0.3), rgba(0,0,200,0.3));
 }
 
 #project5 {
-	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("imgs/lairbnb.jpg");
-	filter: grayscale(1);
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
 }
 
 .work-item {
