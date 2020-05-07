@@ -100,7 +100,7 @@
 }
 
 #project3 {
-	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("imgs/jfg.jpg");
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("imgs/garnish.jpg");
 	background-size: cover;
 	background-position: top;
 	filter: grayscale(1);
@@ -210,7 +210,7 @@ h1 {
 
 /* RESPONSIVE (BOOTSTRAP OVERRIDE) */
 
-@media (max-width: 540px) {
+@media (max-width: 768px) {
 	h1 {
 		font-size: 3rem !important;
 	}
